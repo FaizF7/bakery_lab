@@ -3,6 +3,7 @@ import CakeContainer from "../components/CakeContainer";
 import { teaLoaf } from "../components/Cakes";
 import { victoraSponge } from "../components/Cakes";
 import { carrotCake } from "../components/Cakes";
+import './BakeryContainer.css';
 
 const BakeryContainer = () => {
 
@@ -22,16 +23,16 @@ const BakeryContainer = () => {
     return ( 
         <>
         <h1>BNTA BAKERY</h1>
-        <p>Average rating: { averageRating.toFixed(1) }</p>
-        {/* <div>
-            {cakes.map((cake) => {<CakeContainer cake = {cake} onButtonClick = {incrementEarnings} />})}
-        </div> */}
-        <hr />
+        <p>Average rating: { averageRating.toFixed(1) }</p><hr/>
+        <div>
+            {cakes.map((cake) => <><CakeContainer cake = {cake} onButtonClick = {incrementEarnings} /><hr/></>)}
+        </div>
+        {/* <hr />
         <CakeContainer cake = {victoraSponge} onButtonClick = {incrementEarnings} />
         <hr />
         <CakeContainer cake = {teaLoaf} onButtonClick = {incrementEarnings} />
         <hr />
-        <CakeContainer cake = {carrotCake} onButtonClick = {incrementEarnings}/>
+        <CakeContainer cake = {carrotCake} onButtonClick = {incrementEarnings}/> */}
         <p>Total earnings: £{earnings}</p>
         </>
     );

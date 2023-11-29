@@ -14,7 +14,7 @@ const CakeContainer = ({cake, onButtonClick}) => {
     return ( 
         <>
             <h3>{cakeName}</h3>
-            <ul>Ingredient: {ingredients.map(ingredient=> <li>{ingredient}</li>)}</ul>
+            <ul>Ingredients: {ingredients.map(ingredient=> <li>{ingredient}</li>)}</ul>
             <p>£{price}</p>
             <p>Rating: {rating}</p>
             {/* <p>Number sold: {numberSold} </p> */}
